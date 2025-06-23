@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Protest+Strike&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  /* colors */
+  --color-primary: #777777;
+  --color-gray: #F4F4F4;
+  /* fonts */
+  --font-pt-sans: 'PT Sans';
+  --font-ubuntu: 'Ubuntu';
+  --font-roboto: 'Roboto';
+  --font-inter: 'Inter';
+  --font-protest: 'Protest Strike';
+}
+
+@layer base {
+  * {
+    @apply focus:outline-none;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply overflow-x-hidden h-full;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+  textarea {
+    @apply outline-none;
+  }
+}
