@@ -4,7 +4,11 @@
 @theme {
   /* colors */
   --color-primary: #777777;
+  --color-secondary: #333333;
+  --color-brand-green: #1F2731;
   --color-gray: #F4F4F4;
+  --color-blue: #1C9AEA;
+  --color-light-blue: #37A0D9;
   /* fonts */
   --font-pt-sans: 'PT Sans';
   --font-ubuntu: 'Ubuntu';
