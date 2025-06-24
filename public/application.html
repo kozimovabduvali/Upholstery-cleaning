@@ -39,13 +39,65 @@
         </a>
       </div>
       <!-- Menu BTN -->
-      <button class="inline-block md:hidden transition duration-200 ease-in-out hover:text-primary/75">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="size-6">
+      <button id="mobile-menu-btn"
+        class="inline-block md:hidden transition duration-200 ease-in-out hover:text-primary/75">
+        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" class="size-6 hidden">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 bg-opacity-50 z-40 hidden md:hidden"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="fixed top-0 right-0 h-full w-80 max-w-sm bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden">
+      <div class="flex flex-col h-full">
+        <!-- Mobile Menu Header -->
+        <div class="flex items-center justify-between p-5 border-b border-gray-200">
+          <img class="h-12" src="./assets/img/logo.png" alt="Logo image">
+          <!-- Close Button -->
+          <button id="mobile-menu-close-btn" class="transition duration-200 ease-in-out hover:text-primary/75">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation Links -->
+        <nav class="flex-1 px-5 py-6">
+          <div class="space-y-1">
+            <a class="block text-base font-bold text-primary uppercase font-pt-sans transition duration-200 ease-in-out hover:text-primary/75 hover:bg-gray-50 px-3 py-1 rounded-md"
+              href="#price-list">
+              cennik
+            </a>
+            <a class="block text-base font-bold text-primary uppercase font-pt-sans transition duration-200 ease-in-out hover:text-primary/75 hover:bg-gray-50 px-3 py-1 rounded-md"
+              href="#review">
+              opinii
+            </a>
+            <a class="block text-base font-bold text-primary uppercase font-pt-sans transition duration-200 ease-in-out hover:text-primary/75 hover:bg-gray-50 px-3 py-1 rounded-md"
+              href="#special-offer">
+              Promocja
+            </a>
+            <a class="block text-base font-bold text-primary uppercase font-pt-sans transition duration-200 ease-in-out hover:text-primary/75 hover:bg-gray-50 px-3 py-1 rounded-md"
+              href="#questions-answers">
+              Pytania i odpowiedzi
+            </a>
+            <a class="block text-base font-bold text-primary uppercase font-pt-sans transition duration-200 ease-in-out hover:text-primary/75 hover:bg-gray-50 px-3 py-1 rounded-md"
+              href="#contact">
+              Zapraszamy do kontaktu
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
   </header>
   <!-- Main -->
   <main>

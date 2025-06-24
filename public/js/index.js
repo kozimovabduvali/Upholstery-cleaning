@@ -1,3 +1,65 @@
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function () {
+  // Mobile menu functionality
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+  const mobileMenuCloseBtn = document.getElementById('mobile-menu-close-btn');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+
+  let isMenuOpen = false;
+
+  // Toggle mobile menu
+  function toggleMobileMenu() {
+    isMenuOpen = !isMenuOpen;
+
+    if (isMenuOpen) {
+      // Open menu
+      mobileMenu.classList.remove('translate-x-full');
+      mobileMenuOverlay.classList.remove('hidden');
+      hamburgerIcon.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Close menu
+      mobileMenu.classList.add('translate-x-full');
+      mobileMenuOverlay.classList.add('hidden');
+      hamburgerIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Event listeners
+  mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+  mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+  mobileMenuCloseBtn.addEventListener('click', toggleMobileMenu);
+
+  // Close menu when clicking on navigation links
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      toggleMobileMenu();
+    });
+  });
+
+  // Close menu on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isMenuOpen) {
+      toggleMobileMenu();
+    }
+  });
+
+  // Handle window resize - close menu if screen becomes desktop size
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768 && isMenuOpen) {
+      toggleMobileMenu();
+    }
+  });
+});
+
+
 // Swiper
 let swiper = new Swiper(".swipper-images", {
   slidesPerView: 1,
