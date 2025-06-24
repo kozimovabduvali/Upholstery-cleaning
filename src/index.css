@@ -5,10 +5,10 @@
   /* colors */
   --color-primary: #777777;
   --color-secondary: #333333;
-  --color-brand-green: #1F2731;
-  --color-gray: #F4F4F4;
-  --color-blue: #1C9AEA;
-  --color-light-blue: #37A0D9;
+  --color-brand-green: #1f2731;
+  --color-gray: #f4f4f4;
+  --color-blue: #1c9aea;
+  --color-light-blue: #37a0d9;
   /* fonts */
   --font-pt-sans: 'PT Sans';
   --font-ubuntu: 'Ubuntu';
@@ -34,4 +34,8 @@
   textarea {
     @apply outline-none;
   }
+}
+
+.blur-shadow {
+  box-shadow: 0px 2px 6px 0px #0000001a;
 }
