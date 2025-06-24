@@ -5,7 +5,7 @@ let swiper = new Swiper(".swipper-images", {
   loop: true,
   speed: 3500,
   autoplay: {
-    delay: 0, 
+    delay: 0,
     disableOnInteraction: false,
   },
   grabCursor: true,
@@ -69,6 +69,30 @@ document.addEventListener('DOMContentLoaded', function () {
         content.classList.add('hidden');
         plusIcon.classList.remove('hidden');
         minusIcon.classList.add('hidden');
+      }
+    });
+  });
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleButtons = document.querySelectorAll('.toggle-btn');
+
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const reviewCard = this.closest('.bg-white');
+      const reviewText = reviewCard.querySelector('.review-text');
+
+      if (reviewText.classList.contains('line-clamp-4')) {
+        // Expand the text
+        reviewText.classList.remove('line-clamp-4');
+        this.textContent = 'Свернуть';
+      } else {
+        // Collapse the text
+        reviewText.classList.add('line-clamp-4');
+        this.textContent = 'Раскрыть';
       }
     });
   });

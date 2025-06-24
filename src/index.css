@@ -39,3 +39,9 @@
 .blur-shadow {
   box-shadow: 0px 2px 6px 0px #0000001a;
 }
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
