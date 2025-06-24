@@ -2,7 +2,14 @@
 let swiper = new Swiper(".swipper-images", {
   slidesPerView: 1,
   spaceBetween: 10,
-  // Breakpoints
+  loop: true,
+  speed: 3500,
+  autoplay: {
+    delay: 0, 
+    disableOnInteraction: false,
+  },
+  grabCursor: true,
+  allowTouchMove: true,
   breakpoints: {
     320: {
       slidesPerView: 1.3,
