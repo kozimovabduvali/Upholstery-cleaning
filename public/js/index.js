@@ -17,6 +17,10 @@ let swiper = new Swiper(".swipper-images", {
       spaceBetween: 30,
     },
     1024: {
+      slidesPerView: 3.5,
+      spaceBetween: 40,
+    },
+    1280: {
       slidesPerView: 4,
       spaceBetween: 40,
     },
