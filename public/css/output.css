@@ -326,6 +326,12 @@
   .h-52 {
     height: calc(var(--spacing) * 52);
   }
+  .h-64 {
+    height: calc(var(--spacing) * 64);
+  }
+  .h-110 {
+    height: calc(var(--spacing) * 110);
+  }
   .w-full {
     width: 100%;
   }
@@ -741,6 +747,11 @@
       height: calc(var(--spacing) * 36);
     }
   }
+  .md\:h-80 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 80);
+    }
+  }
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -854,6 +865,11 @@
       height: calc(var(--spacing) * 45);
     }
   }
+  .lg\:h-10 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 10);
+    }
+  }
   .lg\:h-65 {
     @media (width >= 64rem) {
       height: calc(var(--spacing) * 65);
@@ -862,6 +878,16 @@
   .lg\:h-65\.5 {
     @media (width >= 64rem) {
       height: calc(var(--spacing) * 65.5);
+    }
+  }
+  .lg\:h-100 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 100);
+    }
+  }
+  .lg\:h-110 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 110);
     }
   }
   .lg\:w-1\/2 {
@@ -947,6 +973,11 @@
   .lg\:py-5\.5 {
     @media (width >= 64rem) {
       padding-block: calc(var(--spacing) * 5.5);
+    }
+  }
+  .lg\:py-10 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 10);
     }
   }
   .lg\:py-12 {
